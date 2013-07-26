@@ -21,10 +21,10 @@ module frame_motor() {
     translate([0, 0, (frame_height/2)-25]) union() {
       // Motor cable paths.
       for (mirror = [-1, 1]) scale([mirror, 1, 1]) {
-        translate([(extrusion_spacing+(extrusion*2))/2-2, 0, 0])
+        translate([(extrusion_spacing+(extrusion*2))/2-1.5, 0, 0])
           cylinder(r=2.5, h=40);
         translate([-11, 0, 0])
-          #cube([15, 4, 15], center=true);
+          cube([15, 4, 15], center=true);
       }
     
       translate([0, motor_offset, 0]) {
